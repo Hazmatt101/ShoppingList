@@ -1,8 +1,9 @@
 import ShoppingListItem from "../../model/ShoppingListItem";
 import ListItem from "../list-item/ListItem";
 
-export const ShoppingList = (shoppingListItems: ShoppingListItem[]) => {
-
+export const ShoppingList = (props: { shoppingListItems: ShoppingListItem[]; }) => {
+    const {shoppingListItems} = props;
+    
     return (
         <>
         {shoppingListItems && shoppingListItems.length > 0 ? (
@@ -14,7 +15,7 @@ export const ShoppingList = (shoppingListItems: ShoppingListItem[]) => {
         ) : (
             <>
                 <div>
-                    No items in your shopping list yet
+                    No items in your shopping list yet.
                 </div>
             </>
         )}
